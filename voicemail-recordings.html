@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Voicemail & Recordings - Voice Platform Demo</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="navbar"></div>
+  <main>
+    <h1>Voicemail &amp; Recordings</h1>
+    <p>Manage voicemails and audio files.</p>
+    <ul>
+      <li>Voicemail inbox with transcripts and summaries.</li>
+      <li>Greeting library and retention policies.</li>
+      <li>Bulk actions for management.</li>
+    </ul>
+  </main>
+  <script>
+    fetch('nav.html').then(r => r.text()).then(html => document.getElementById('navbar').innerHTML = html);
+  </script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Live - Voice Platform Demo</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="navbar"></div>
+  <main>
+    <h1>Live</h1>
+    <p>Real-time monitoring and controls.</p>
+    <ul>
+      <li>Widgets: calls in queue, live ASA, agent status, numbers view, events stream.</li>
+      <li>Controls: monitor, whisper, barge, overflow toggle, close lines.</li>
+    </ul>
+  </main>
+  <script>
+    fetch('nav.html').then(r => r.text()).then(html => document.getElementById('navbar').innerHTML = html);
+  </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Team & Roles - Voice Platform Demo</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="navbar"></div>
+  <main>
+    <h1>Team &amp; Roles</h1>
+    <p>Manage users and permissions.</p>
+    <ul>
+      <li>Invite users, SSO, MFA.</li>
+      <li>Role-based access for recordings, PII, exports.</li>
+      <li>Per-user settings and status controls.</li>
+    </ul>
+  </main>
+  <script>
+    fetch('nav.html').then(r => r.text()).then(html => document.getElementById('navbar').innerHTML = html);
+  </script>
+</body>
+</html>
