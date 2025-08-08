@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Compliance & Privacy - Voice Platform Demo</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="navbar"></div>
+  <main>
+    <h1>Compliance &amp; Privacy</h1>
+    <p>Control recording consent and data retention.</p>
+    <ul>
+      <li>Recording consent settings and regional rules.</li>
+      <li>Data retention policies and PII handling.</li>
+      <li>GDPR and HIPAA tools.</li>
+    </ul>
+  </main>
+  <script>
+    fetch('nav.html').then(r => r.text()).then(html => document.getElementById('navbar').innerHTML = html);
+  </script>
+</body>
+</html>

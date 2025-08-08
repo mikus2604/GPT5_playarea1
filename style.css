@@ -4,8 +4,10 @@ body {
   color: #fff;
   min-height: 100vh;
   background: linear-gradient(135deg, #1f1c2c, #928DAB);
+  padding: 0;
 }
 
+/* Glass nav (inline fallback) */
 nav {
   display: flex;
   flex-wrap: wrap;
@@ -28,6 +30,30 @@ nav a {
 nav a.active,
 nav a:hover {
   background: rgba(255, 255, 255, 0.2);
+}
+
+/* Dark nav list (used by nav.html) */
+.nav-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  background-color: #333;
+}
+
+.nav-list li {
+  margin: 0;
+}
+
+.nav-list li a {
+  display: block;
+  padding: 14px 20px;
+  color: white;
+  text-decoration: none;
+}
+
+.nav-list li a:hover {
+  background-color: #575757;
 }
 
 main {

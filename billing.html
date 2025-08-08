@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Billing - Voice Platform Demo</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="navbar"></div>
+  <main>
+    <h1>Billing</h1>
+    <p>Plans, invoices, and usage.</p>
+    <ul>
+      <li>View plan limits and add-ons.</li>
+      <li>Manage invoices, payment method, VAT.</li>
+      <li>Usage graphs for minutes and storage.</li>
+    </ul>
+  </main>
+  <script>
+    fetch('nav.html').then(r => r.text()).then(html => document.getElementById('navbar').innerHTML = html);
+  </script>
+</body>
+</html>

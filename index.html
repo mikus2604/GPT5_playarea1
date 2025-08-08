@@ -7,35 +7,49 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <nav class="glass">
-    <a href="#" data-section="home" class="active">Home</a>
-    <a href="#" data-section="calls">Calls</a>
-    <a href="#" data-section="live">Live</a>
-    <a href="#" data-section="contacts">Contacts</a>
-    <a href="#" data-section="scripts">Scripts &amp; AI</a>
-    <a href="#" data-section="numbers">Numbers &amp; Routing</a>
-    <a href="#" data-section="schedules">Schedules</a>
-    <a href="#" data-section="voicemail">Voicemail</a>
-    <a href="#" data-section="analytics">Analytics</a>
-    <a href="#" data-section="integrations">Integrations</a>
-    <a href="#" data-section="team">Team &amp; Roles</a>
-    <a href="#" data-section="billing">Billing</a>
-    <a href="#" data-section="compliance">Compliance</a>
-    <a href="#" data-section="developers">Developers</a>
-    <a href="#" data-section="audit">Audit Log</a>
-  </nav>
+  <!-- Navbar loaded from a shared partial -->
+  <div id="navbar"></div>
+  <script>
+    // Load the shared navbar; if it fails, fall back to an inline nav.
+    fetch('nav.html')
+      .then(r => r.ok ? r.text() : Promise.reject())
+      .then(html => { document.getElementById('navbar').innerHTML = html; })
+      .catch(() => {
+        document.getElementById('navbar').innerHTML = `
+          <nav class="glass">
+            <a href="#" data-section="home" class="active">Home</a>
+            <a href="#" data-section="calls">Calls</a>
+            <a href="#" data-section="live">Live</a>
+            <a href="#" data-section="contacts">Contacts</a>
+            <a href="#" data-section="scripts">Scripts &amp; AI</a>
+            <a href="#" data-section="numbers">Numbers &amp; Routing</a>
+            <a href="#" data-section="schedules">Schedules</a>
+            <a href="#" data-section="voicemail">Voicemail</a>
+            <a href="#" data-section="analytics">Analytics</a>
+            <a href="#" data-section="integrations">Integrations</a>
+            <a href="#" data-section="team">Team &amp; Roles</a>
+            <a href="#" data-section="billing">Billing</a>
+            <a href="#" data-section="compliance">Compliance</a>
+            <a href="#" data-section="developers">Developers</a>
+            <a href="#" data-section="audit">Audit Log</a>
+          </nav>`;
+      });
+  </script>
+
   <main>
     <section id="home" class="section glass active">
       <h1>Overview</h1>
       <div class="card-container">
         <div class="card glass"><h3>Calls Today</h3><p>0</p></div>
+        <div class="card glass"><h3>Calls This Week</h3><p>0</p></div>
+        <div class="card glass"><h3>Calls Last 30 Days</h3><p>0</p></div>
         <div class="card glass"><h3>Answer Rate</h3><p>0%</p></div>
         <div class="card glass"><h3>Avg Speed to Answer</h3><p>0s</p></div>
         <div class="card glass"><h3>Avg Handle Time</h3><p>0s</p></div>
         <div class="card glass"><h3>Missed Calls</h3><p>0</p></div>
-        <div class="card glass"><h3>Bookings</h3><p>0</p></div>
+        <div class="card glass"><h3>Bookings Created</h3><p>0</p></div>
       </div>
-      <p>Charts for volume, answer rate heatmap, top intents and funnel would appear here.</p>
+      <p>Charts for call volume, answer rate heatmap, top intents, and bookings funnel would appear here.</p>
     </section>
 
     <section id="calls" class="section glass">
@@ -108,6 +122,7 @@
       <p>Track every change with who, what and when.</p>
     </section>
   </main>
+
   <script src="script.js"></script>
 </body>
 </html>

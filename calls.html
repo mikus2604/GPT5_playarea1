@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Calls - Voice Platform Demo</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="navbar"></div>
+  <main>
+    <h1>Calls</h1>
+    <p>Filter and inspect individual calls.</p>
+    <ul>
+      <li>Filters: date range, number, IVR branch, tag, outcome, agent, status.</li>
+      <li>Columns: timestamp, caller, number dialled, IVR branch, outcome, duration, tags, transcript status, recording, booking link, notes.</li>
+      <li>Row drawer: transcript, recording player, outcome, AI summary, PII reveal.</li>
+    </ul>
+  </main>
+  <script>
+    fetch('nav.html').then(r => r.text()).then(html => document.getElementById('navbar').innerHTML = html);
+  </script>
+</body>
+</html>
