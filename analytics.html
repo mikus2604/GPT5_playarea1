@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Analytics - Voice Platform Demo</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="navbar"></div>
+  <main>
+    <h1>Analytics</h1>
+    <p>Dashboards and metrics for call activity.</p>
+    <ul>
+      <li>Overview, inbound, outbound, unanswered, user activity.</li>
+      <li>Common metrics: calls, answer rate, ASA, AHT, CSAT.</li>
+      <li>Graphs: time series, distributions, funnels, leaderboards.</li>
+    </ul>
+  </main>
+  <script>
+    fetch('nav.html').then(r => r.text()).then(html => document.getElementById('navbar').innerHTML = html);
+  </script>
+</body>
+</html>

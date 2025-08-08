@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Scripts & AI - Voice Platform Demo</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="navbar"></div>
+  <main>
+    <h1>Scripts &amp; AI</h1>
+    <p>Define playbooks, prompts, and knowledge.</p>
+    <ul>
+      <li>Playbooks: lead intake, support triage, payments, etc.</li>
+      <li>Prompts & brand voice, knowledge base, intents & routing.</li>
+      <li>Fallbacks, compliance guardrails, testing zone.</li>
+    </ul>
+  </main>
+  <script>
+    fetch('nav.html').then(r => r.text()).then(html => document.getElementById('navbar').innerHTML = html);
+  </script>
+</body>
+</html>

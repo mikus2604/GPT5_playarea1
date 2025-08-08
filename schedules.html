@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Schedules - Voice Platform Demo</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="navbar"></div>
+  <main>
+    <h1>Schedules</h1>
+    <p>Define business hours and availability.</p>
+    <ul>
+      <li>Business hours per location.</li>
+      <li>Holidays and exceptions.</li>
+      <li>On-call rotations and meeting availability.</li>
+    </ul>
+  </main>
+  <script>
+    fetch('nav.html').then(r => r.text()).then(html => document.getElementById('navbar').innerHTML = html);
+  </script>
+</body>
+</html>

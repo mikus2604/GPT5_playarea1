@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Numbers & Routing - Voice Platform Demo</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="navbar"></div>
+  <main>
+    <h1>Numbers &amp; Routing</h1>
+    <p>Manage phone numbers and call flows.</p>
+    <ul>
+      <li>Inventory of numbers with status and recording options.</li>
+      <li>Connect/port numbers or bring your PBX via SIP.</li>
+      <li>Routing rules: schedules, IVR, geo-routing, overflow, recording policy.</li>
+    </ul>
+  </main>
+  <script>
+    fetch('nav.html').then(r => r.text()).then(html => document.getElementById('navbar').innerHTML = html);
+  </script>
+</body>
+</html>

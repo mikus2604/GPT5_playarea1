@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Contacts - Voice Platform Demo</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="navbar"></div>
+  <main>
+    <h1>Contacts</h1>
+    <p>Manage callers and their history.</p>
+    <ul>
+      <li>Views: All, New, VIP, Blocked, Recently active.</li>
+      <li>Record page: identity, timeline, intents, notes, block options.</li>
+    </ul>
+  </main>
+  <script>
+    fetch('nav.html').then(r => r.text()).then(html => document.getElementById('navbar').innerHTML = html);
+  </script>
+</body>
+</html>

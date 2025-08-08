@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Audit Log - Voice Platform Demo</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="navbar"></div>
+  <main>
+    <h1>Audit Log</h1>
+    <p>Track changes and sensitive actions.</p>
+    <ul>
+      <li>Record who, what, when for each change.</li>
+      <li>Log sensitive views like PII reveals and downloads.</li>
+      <li>Exportable entries.</li>
+    </ul>
+  </main>
+  <script>
+    fetch('nav.html').then(r => r.text()).then(html => document.getElementById('navbar').innerHTML = html);
+  </script>
+</body>
+</html>

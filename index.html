@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Home - Voice Platform Demo</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="navbar"></div>
+  <main>
+    <h1>Overview</h1>
+    <p>Snapshot of health and quick actions.</p>
+    <div class="card-container">
+      <div class="card"><h3>Calls Today</h3><p>0</p></div>
+      <div class="card"><h3>Calls This Week</h3><p>0</p></div>
+      <div class="card"><h3>Calls Last 30 Days</h3><p>0</p></div>
+      <div class="card"><h3>Answer Rate</h3><p>0%</p></div>
+      <div class="card"><h3>Avg Speed to Answer</h3><p>0s</p></div>
+      <div class="card"><h3>Avg Handle Time</h3><p>0s</p></div>
+      <div class="card"><h3>Missed Calls</h3><p>0</p></div>
+      <div class="card"><h3>Bookings Created</h3><p>0</p></div>
+    </div>
+    <p>Charts for call volume, answer rate heatmap, top intents, and bookings funnel would appear here.</p>
+  </main>
+  <script>
+    fetch('nav.html').then(r => r.text()).then(html => document.getElementById('navbar').innerHTML = html);
+  </script>
+</body>
+</html>
